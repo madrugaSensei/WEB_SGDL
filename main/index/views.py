@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def teste(request):
+    context = {"testador":"madruguinha"}
+    return render(request, 'index/index.html', context)
